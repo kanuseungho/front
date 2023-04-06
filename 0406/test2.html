@@ -1,0 +1,42 @@
+<html>
+<head>
+  <title>회원가입(test2.html)</title>
+</head>
+<body>
+  <h2>회원가입폼</h2>
+  <form name="myform">
+    아이디 <input type="text" name="mid" autofocus placeholder="아이디를 입력하세요"/><br/>
+    비밀번호 <input type="password" name="pwd" placeholder="비밀번호를 입력하세요"/><br/>
+    성별 <input type="radio" name="gender" value="남" checked/>남자
+         <input type="radio" name="gender" value="여"/>여자<br/>
+    취미 <input type="checkbox" name="hobby" value="등산"/>등산
+         <input type="checkbox" name="hobby" value="낚시"/>낚시
+         <input type="checkbox" name="hobby" value="볼링"/>볼링
+         <input type="checkbox" name="hobby" value="수영"/>수영
+         <input type="checkbox" name="hobby" value="바둑"/>바둑
+         <input type="checkbox" name="hobby" value="기타" checked/>기타<br/>
+    교통수단
+      <select name="traffic">
+        <option>도보</option>
+        <option>버스</option>
+        <option>승용차</option>
+        <option>기차</option>
+        <option>비행기</option>
+      </select>
+      <br/>
+    즐겨찾는 음식
+      <select name="food" multiple>
+        <option>피자</option>
+        <option>햄버거</option>
+        <option>과일</option>
+        <option>김밥</option>
+        <option>마라탕</option>
+      </select>
+      <br/>
+    첨부파일 <input type="file" name="fName"/><br/>
+    자기소개 <textarea rows="5" cols="50" name="content"></textarea><br/>
+    <input type="submit" value="회원가입"/>
+    <input type="reset" value="다시입력"/>
+  </form>
+</body>
+</html>

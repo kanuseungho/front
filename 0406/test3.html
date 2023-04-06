@@ -1,0 +1,76 @@
+<html>
+<head>
+  <title>회원가입(test3.html)</title>
+</head>
+<body>
+  <h2>회원가입폼</h2>
+  <form name="myform">
+    <table border="1" cellpadding="10" cellspacing="0">
+      <tr>
+        <td align="center" bgcolor="orange"><label for="mid">아이디</label></td>
+        <td><input type="text" name="mid" id="mid" maxlength="15" required autofocus placeholder="아이디를 입력하세요"/></td>
+      </tr>
+      <tr>
+        <td align="center" bgcolor="orange"><label for="pwd">비밀번호</label></td>
+        <td><input type="password" name="pwd" id="pwd" required placeholder="비밀번호를 입력하세요"/></td>
+      </tr>
+      <tr>
+        <td align="center" bgcolor="orange">성별</td>
+        <td>
+          <input type="radio" name="gender" value="남" checked/>남자
+          <input type="radio" name="gender" value="여"/>여자
+        </td>
+      </tr>
+      <tr>
+        <td align="center" bgcolor="orange">취미</td>
+        <td>
+          <input type="checkbox" name="hobby" value="등산"/>등산
+          <input type="checkbox" name="hobby" value="낚시"/>낚시
+          <input type="checkbox" name="hobby" value="볼링"/>볼링
+          <input type="checkbox" name="hobby" value="수영"/>수영
+          <input type="checkbox" name="hobby" value="바둑"/>바둑
+          <input type="checkbox" name="hobby" value="기타" checked/>기타
+        </td>
+      </tr>
+      <tr>
+        <td align="center" bgcolor="orange">교통수단</td>
+        <td>
+          <select name="traffic">
+            <option>도보</option>
+            <option>버스</option>
+            <option>승용차</option>
+            <option>기차</option>
+            <option>비행기</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td align="center" bgcolor="orange">즐겨찾는 음식</td>
+        <td>
+          <select name="food" multiple>
+            <option>피자</option>
+            <option>햄버거</option>
+            <option>과일</option>
+            <option>김밥</option>
+            <option>마라탕</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td align="center" bgcolor="orange">첨부파일</td>
+        <td><input type="file" name="fName"/></td>
+      </tr>
+      <tr>
+        <td align="center" bgcolor="orange">자기소개</td>
+        <td><textarea rows="5" cols="50" name="content"></textarea></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center">
+          <input type="submit" value="회원가입"/>
+          <input type="reset" value="다시입력"/>
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>
