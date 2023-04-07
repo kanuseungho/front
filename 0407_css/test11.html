@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test11.html</title>
+  <style>
+    input[type="text"]{
+      color: brown;
+      background-color: yellow;
+      font-size: 20pt;
+      padding: auto;
+    }
+    .tit{
+      width: 150px;
+      background-color: aqua;
+    }
+    .btn{
+      padding: auto;
+      font-size: 15pt;
+      background-color: chartreuse;
+      cursor: pointer;
+      
+    }
+    .btn:hover{
+      background-color: green;
+    }
+  </style>
+</head>
+<body>
+  <h2>폼태그와 css연습</h2>
+  <form>
+    <p>
+      <label for="mid" class="tit">아이디</label>
+      <input type="text" name="min" id="mid" style="width: 300px;" placeholder="아이디를 입력하세요" autofocus/>
+    </p>
+    <p>
+      <label for="pwd"class="tit">비밀번호</label>
+      <input type="password" name="pwd" id="pwd"placeholder="비밀번호 입력하세요" />
+    </p>
+    <p>
+      <label for="age"class="tit">나이</label>
+      <input type="number" name="age" id="age"placeholder="나이를 입력하세요" size="3" min="10" maxlength="3"/>
+    </p>
+    <p>
+      <label for="address"class="tit">주소</label>
+      <input type="text" name="address" id="address"  placeholder="아이디를 입력하세요" />
+    </p>
+    <p>
+      <input type="submit" value="전송" class="btn"/>
+      <input type="reset" value="다시전송"class="btn"/>
+    </p>
+  </form>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test13.html</title>
+  <style>
+    #content{
+      width: 400px;
+      float:left;
+    }
+    #content2{
+      width: 400px;
+      float:right;
+    }
+  </style>
+</head>
+<body>
+  <h2>폼태그와 css연습</h2>
+  <form>
+      <div id="content">
+        <fieldset>
+          <legend>회원가입</legend>
+          <p>
+            <label for="mid" class="tit">아이디</label>
+            <input type="text" name="min" id="mid" style="width: 300px;" placeholder="아이디를 입력하세요" autofocus/>
+          </p>
+          <p>
+            <label for="pwd"class="tit">비밀번호</label>
+            <input type="password" name="pwd" id="pwd"placeholder="비밀번호 입력하세요" />
+          </p>
+          <p>
+            <label for="age"class="tit">나이</label>
+            <input type="number" name="age" id="age"placeholder="나이를 입력하세요" size="3" min="10" maxlength="3"/>
+          </p>
+          <p>
+            <label for="address"class="tit">주소</label>
+            <input type="text" name="address" id="address"  placeholder="아이디를 입력하세요" />
+          </p>
+          <p>
+            <input type="submit" value="전송" class="btn"/>
+            <input type="reset" value="다시전송"class="btn"/>
+          </p>
+        </fieldset>
+      </div>
+      <div id="content2">
+        <fieldset>
+          <legend>회원가입</legend>
+          <p>
+            <label for="mid" class="tit">아이디</label>
+            <input type="text" name="min" id="mid" style="width: 300px;" placeholder="아이디를 입력하세요" autofocus/>
+          </p>
+          <p>
+            <label for="pwd"class="tit">비밀번호</label>
+            <input type="password" name="pwd" id="pwd"placeholder="비밀번호 입력하세요" />
+          </p>
+          <p>
+            <label for="age"class="tit">나이</label>
+            <input type="number" name="age" id="age"placeholder="나이를 입력하세요" size="3" min="10" maxlength="3"/>
+          </p>
+          <p>
+            <label for="address"class="tit">주소</label>
+            <input type="text" name="address" id="address"  placeholder="아이디를 입력하세요" />
+          </p>
+          <p>
+            <input type="submit" value="전송" class="btn"/>
+            <input type="reset" value="다시전송"class="btn"/>
+          </p>
+        </fieldset>
+      </div>
+  </form>
+</body>
+</html>
