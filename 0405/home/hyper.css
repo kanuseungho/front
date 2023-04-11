@@ -1,0 +1,7 @@
+a:link{
+    color: aliceblue; text-decoration: none;
+}
+a:visited{color: aliceblue;}
+a:hover{
+    text-decoration: underline;
+}

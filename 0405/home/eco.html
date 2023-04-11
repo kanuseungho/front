@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eco.html</title>
+    <style>
+        #all{
+            position: absolute;
+            top: 45%;
+            left: 70%;
+        }
+        .main-bu{
+            position: absolute;
+            top: 70%;
+            right: 15%;
+        }
+        #ch{
+            border: 3px solid black;
+            margin-top: 120px;
+            width: 60%;
+            height: 500px;
+        }
+        .ch-1{
+            border-bottom: solid 1px black;
+            font-weight: bold;
+            font-size: 40px;
+        }
+        body{
+            background-image: url(3.jpg);
+            background-size:100%;
+        }
+    </style>
+    <link href="hyper.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <h1 id="na"><a href="0408.html" target="_top">Green universe</a></h1>
+    <div id="all">
+        <div>성: <input type="text" name="name2" id="name2" value="ex)김,박,이" /></div>
+        <div>이름: <input type="text" name="name" id="name" value="ex)길동, 에스더, 지혜" /></div>
+        <div>주소: <input type="text" name="address" id="address" /></div>
+        <div>
+         수량:
+          <select name="pay" size="1">
+            <option value="1">1장</option>
+            <option value="2" selected>2장</option>
+            <option value="3">3장</option>
+            <option value="4">4장</option>
+            <option value="5">5장이상</option>
+          </select>
+        </div>
+         <div>
+            결제수단:
+            <input type="checkbox" name="pay"checked />회원권이용
+            <input type="checkbox" name="pay" />카카오페이 <br />
+            <input type="checkbox" name="pay" />카드결제 
+            <input type="checkbox" name="pay" />휴대폰결제
+            <input type="checkbox" name="pay"  />무통장입금
+         </div>
+         <div>출국: <input type="date" name="out" value="2024-05-10" /></div>
+         <div>입국: <input type="date" name="in" value="2024-06-10" /></div>
+        </div>
+        <div class="main-bu">
+           <button type="submit" class="bu">다음</button>
+           <button type="reset" class="bu">취소</button>
+        </div>
+        <div id="ch">
+            <div class="ch-1">동의 및 안내</div>
+                <ul>
+                    <li>~~~~~~~~~~~~~~~~~~~~죽을수도있어요</li><br/><br/><br/>
+                    <li>~~~~~~~~~~~~~~~~~~~~살수도있어요</li><br/><br/><br/>
+                    <li>~~~~~~~~~~~~~~~~~~~~~고혈압환작금지</li><br/><br/><br/>
+                    <li>~~~~~~~~~~~~~~~~~~~~~사망 시 책임전과</li><br/><br/><br/>
+                    <li>~~~~~~~~~~~~~~~~~~~~~~어쩌구저쩌구</li><br/><br/><br/>
+                </ul>
+        </div>
+</body>
+</html>
