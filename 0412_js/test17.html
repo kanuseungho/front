@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test13.html</title>
+  <script>
+    'use strict';
+
+    function calc() {
+      // let su1 = document.getElementById("su1").value;
+      // let op  = document.getElementById("op").value;
+      // let su2 = document.getElementById("su2").value;
+      let su1 = myform.su1.value;
+      let op = myform.op.value;
+      let su2 = myform.su2.value;
+      let res = eval(su1 + op + su2);
+      let temp = su1 + op + su2 + "=";
+      alert("출력결과?\n\n" + temp + res + "입니다.");
+    }
+  </script>
+</head>
+<body>
+  <h2>두수를 입력하여 4칙연산 계산하기</h2>
+  <form name="myform">
+    <p>
+      첫번째 수 : <input type="number" name="su1" id="su1" value="0"/><br/>
+      연산자 : <input type="radio" name="op" id="op1" value="+" />+ &nbsp;
+              <input type="radio" name="op" id="op2" value="-" />- &nbsp;
+              <input type="radio" name="op" id="op3" value="*" />* &nbsp;
+              <input type="radio" name="op" id="op4" value="/" />/ &nbsp;<br/>
+      두번째 수 : <input type="number" name="su2" id="su2" value="0"/><br/>
+      <input type="button" value="계산" onclick="calc()" />
+    </p>
+  </form>
+</body>
+</html>

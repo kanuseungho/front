@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test12.html</title>
+  <script>
+    'ues strict'
+    function msg1(){
+      // alert("메시지출력");
+      let su = prompt("수를 입력하세요");
+      // let hap = su*100;
+      let hap = eval(su)+100;
+      console.log("su+100:"+hap);
+      let ans=confirm("작업을 계속하시겠습니까?");
+      console.log("ans:");
+    }
+  </script>
+</head>
+<body>
+  <h2>스크립트를 통한 입출력</h2>
+  <p>값을 입력해 주세요</p>
+  <input type="button" value="입력" onclick="msg1()"/>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test23.html</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    'use strict';
+
+    function fCheck() {
+      // let mid = document.getElementById("mid").value;
+      let mid = myform.mid.value;
+      let pwd = document.getElementById("pwd").value;
+      let age = document.getElementById("age").value;
+      // let gender = myform.gender.value;
+      let gender;
+      if(document.getElementById("gender1").checked) gender = "남자";
+      if(document.getElementById("gender2").checked) gender = "여자";
+      // let job = document.getElementById("job").value;
+      
+      let job = '';
+      if(document.getElementById("card1").checked) job += document.getElementById("card1").value + "/";
+      if(document.getElementById("card2").checked) job += document.getElementById("card2").value + "/";
+      if(document.getElementById("card3").checked) job += document.getElementById("card3").value + "/";
+      if(document.getElementById("card4").checked) job += document.getElementById("card4").value + "/";
+      if(document.getElementById("card5").checked) job += document.getElementById("card5").value;
+
+      let food = document.getElementById("food").value;
+
+      // demo.innerText = "아이디 : " + mid;
+      // demo.innerHTML = "<div class='text-center'><b>아이디 : " + mid + "</b></div>";
+
+      let str = '';
+      str += '<br/>아이디 : '+mid;
+      str += '<br/>비밀번호 : '+pwd;
+      str += '<br/>나이 : '+age;
+      str += '<br/>성별 : '+gender;
+      str += '<br/>직업 : '+job;
+      str += '<br/>음식 : '+food;
+      demo.innerHTML = str;
+    }
+  </script>
+  <style>
+    th {
+      text-align: center;
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body>
+<p><br/></p>
+<div class="container">
+  <form name="myform">
+    <h2 class="text-center mb-4">회 원 가 입</h2>
+    <table class="table">
+      <tr>
+        <th><label for="mid">아이디</label></th>
+        <td><input type="text" name="mid" id="mid" value="hkd1234" class="form-control" autofocus required /></td>
+      </tr>
+      <tr>
+        <th><label for="pwd">비밀번호</label></th>
+        <td><input type="password" name="pwd" id="pwd" value="1234" class="form-control" required /></td>
+      </tr>
+      <tr>
+        <th><label for="age">나이</label></th>
+        <td><input type="number" name="age" id="age" value="20" class="form-control" required /></td>
+      </tr>
+      <tr>
+        <th><label for="gender">성별</label></th>
+        <td>
+          <input type="radio" name="gender" id="gender1" value="남자" checked />남자 &nbsp;
+          <input type="radio" name="gender" id="gender2" value="여자" />여자
+        </td>
+      </tr>
+      <tr>
+        <th><label for="card">카드</label></th>
+        <td>
+          <input type="checkbox" name="card" id="card1" value="LG카드" checked />LG카드 &nbsp;
+          <input type="checkbox" name="card" id="card2" value="BC카드" />BC 카드 &nbsp;
+          <input type="checkbox" name="card" id="card3" value="삼성카드" />삼성 카드 &nbsp;
+          <input type="checkbox" name="card" id="card4" value="농협카드" />농협 카드 &nbsp;
+          <input type="checkbox" name="card" id="card5" value="국민카드" />국민 카드
+        </td>
+      </tr>
+      <tr>
+        <th><label for="job">직업</label></th>
+        <td>
+          <select name="job" id="job">
+            <option value="">선택</option>
+            <option selected>학생</option>
+            <option>회사원</option>
+            <option>공무원</option>
+            <option>군인</option>
+            <option>기타</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <th><label for="food">좋아하는음식</label></th>
+        <td>
+          <select name="food" id="food" size="5" multiple>
+            <option>피자</option>
+            <option selected>떡복이</option>
+            <option>카스테라</option>
+            <option>초코렛</option>
+            <option>과일</option>
+            <option>탕수육</option>
+            <option>불고기</option>
+            <option>콜라</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" class="text-center">
+          <div class="row">
+            <div class="col"></div>
+            <div class="col"><input type="button" value="값전송" onclick="fCheck()" class="btn btn-success btn-sm form-control mb-2" /></div>
+            <div class="col"><input type="reset" value="다시입력" class="btn btn-warning btn-sm form-control" /></div>
+            <div class="col"></div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </form>
+  <hr/>
+  <b><div id="demo" class="text-center"></div></b>
+</div>
+<p><br/></p>
+</body>
+</html>

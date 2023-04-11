@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test13.html</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    'use strict';
+
+    function calc() {
+      let su1 = document.getElementById("su1").value;
+      let op  = document.getElementById("op").value;
+      let su2 = document.getElementById("su2").value;
+      // let su1 = myform.su1.value;
+      // let op = myform.op.value;
+      // let su2 = myform.su2.value;
+      let res = eval(su1 + op + su2);
+      let temp = su1 + op + su2 + "=";
+      alert("출력결과?\n\n" + temp + res + "입니다.");
+    }
+  </script>
+  <style>
+    th {
+      text-align: center;
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body>
+<p><br/></p>
+<div class="container">
+  <form name="myform">
+    <table class="table table-bordered">
+      <tr class="table-dark text-dark text-center">
+        <td colspan="2"><h3>두수를 입력하여 4칙연산 계산하기</h3></td>
+      </tr>
+      <tr>
+        <th>첫번째 수</th>
+        <td><input type="number" name="su1" id="su1" value="0"/></td>
+      </tr>
+      <tr>
+        <th>연산자</th>
+        <td>
+          <select name="op" id="op">
+            <option value="+">더하기</option>
+            <option value="-">빼기</option>
+            <option value="*">곱하기</option>
+            <option value="/">나누기</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+          <th>두번째 수</th>
+          <td><input type="number" name="su2" id="su2" value="0" min="0"/></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="text-center">
+          <input type="button" value="계산" onclick="calc()" class="btn btn-primary" />
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>
+</body>
+</html>
