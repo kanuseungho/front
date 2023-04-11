@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+}
+
+ul, .container {
+  list-style-type: none;
+  padding: 0px;
+  border:2px solid gray;
+
+  display: grid;
+  height: 500px;
+
+  /* grid-template-columns: 100px 1fr 1fr ;
+  grid-template-rows: 200px 1fr 2fr;
+
+  gap: 20px 10px;
+
+  gap: 10px; */
+  /* grid-template-columns: repeat(3,1fr); */
+  grid-template-columns: repeat(2,minmax(100px,auto));
+  gap: 10px;
+}
+
+li {
+  background-color: rgb(255, 255, 128);
+}
+
+li:nth-child(2n) {
+  background-color: rgb(251, 0, 255);
+}

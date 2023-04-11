@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test2.html</title>
+  <style>
+    .aa1, .aa2, .aa3 {
+      display: inline;
+      padding: 10px;
+    }
+    .aa4 {
+      /* visibility: hidden; */
+      display: none;
+    }
+    .aa5, .aa6, .aa7 {
+      width: 500px;
+      border: 1px solid gray;
+    }
+    .bb1 {
+      /* display: block; */
+      display: inline-block;
+      border: 1px solid red;
+      width: 100px;
+      padding: 10px;
+    }
+    .bb1:hover {
+      background-color: yellow;
+    }
+    .cc1 {
+      display: inline-block;
+      border: 1px solid brown;
+      width: 200px;
+      padding: 15px;
+      margin: 10px;
+    }
+    .dd1 {
+      display: inline;
+      width: 500px;
+      border: 1px solid gray;
+      padding: 15px;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Display 속성</h2>
+  <p>각각의 요소를 어떻게 보여줄지를 결정한다.</p>
+  <p>속성처리 : visibility(기본값:보이기) / hidden(감추기) / inherit(부모요소의 값을 상속받아서 사용)</p>
+  <p>
+    <b>Display 속성</b>
+    none : <span>화면</span>에서 완전히 사라지게한다.<br/>
+  </p>
+  <hr/>
+  <h3>사용예제</h3>
+  <div class="aa1">1.안녕!!!</div>
+  <div class="aa2">2.안녕!!!</div>
+  <div class="aa3">3.안녕!!!</div>
+  <div class="aa4">4.안녕!!!</div>
+  <hr/>
+  <h2>Block/Inline/Inline-Block속성</h2>
+  <div class="aa5">
+    5.<span class="bb1"><font color="red">안녕!!!</font></span>반갑습니다.
+  </div>
+  <hr/>
+  <h2>InLine-Block속성</h2>
+  <div class="aa6">
+    6.<span class="cc1"><font color="blue">안녕!!!</font></span>반갑습니다.
+  </div>
+  <hr/>
+  <h2>InLine속성</h2>
+  <div class="aa7">
+    7.<span class="dd1"><font color="yellow">안녕!!!</font></span>반갑습니다.
+  </div>
+  <hr/>
+</body>
+</html>

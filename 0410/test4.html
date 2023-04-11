@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test4.html</title>
+  <style>
+    body {
+      margin: 0px;
+      font-size: 1em;     /* 16px , 0.5em = 8px , 글자크기 상속 => rem*/
+    }
+    .container {
+      background-color: #ddd;
+      margin: 20px;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    input[type="text"], input[type="number"], input[type="password"], input[type="submit"], select {
+      width: 100%;
+      margin: 20px 0px;
+      padding: 15px 0px;
+      font-size: 2em;
+    }
+    input[type="text"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="submit"]:hover, select:hover {
+      /*
+      width: 100%;
+      margin: 20px 0px;
+      padding: 10px 0px;
+      font-size: 1em;
+      */
+      background-color: #ccc !important;
+    }
+    input[type="radio"] {
+      margin: 15px 5px 25px 10px;
+    }
+    input[type="submit"] {
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      background-color: beige;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <from name="myform">
+      <label for="name">성명</label>
+      <input type="text" name="name" id="name" placeholder="성명을 입력하세요" autofocus required />
+      <label for="age">나이</label>
+      <input type="number" name="age" id="age" />
+      <label for="pwd">비밀번호</label>
+      <input type="password" name="pwd" id="pwd" />
+      <label for="gender">성별</label>
+      <input type="radio" name="gender" id="gender" value="남자" checked />남자 &nbsp;
+      <input type="radio" name="gender" id="gender" value="여자" />여자<br/>
+      <label for="job">직업</label>
+      <select name="job" id="job">
+        <option value="">직업선택</option>
+        <option>학생</option>
+        <option>회사원</option>
+        <option>공무원</option>
+        <option>군인</option>
+        <option>기타</option>
+      </select>
+      <input type="submit" value="회원가입" />
+    </from>
+  </div>
+</body>
+</html>

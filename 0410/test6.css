@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+}
+
+ul, .container {
+  display: flex;
+  list-style-type: none;
+  height: 300px;
+  padding: 0px;
+
+  flex-direction: column;
+  /* flex-direction: column-reverse; */
+  /* flex-wrap: wrap-reverse; */
+
+  border: 3px solid red;
+  
+  /*
+  justify-content: space-evenly;
+  */
+  justify-content: flex-start;
+  /* align-items: center; */
+  align-content: space-between;
+}
+
+li:nth-child(3) {
+  align-self: flex-start;
+}
