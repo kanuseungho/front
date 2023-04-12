@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test6_2.html</title>
+  <script>
+    'use strict';
+
+    function fCheck() {
+      let gender;
+
+      if(document.getElementById("gender1").checked) gender = "남자";
+      if(document.getElementById("gender2").checked) gender = "여자";
+      // else gender = '여자';
+
+      demo.innerHTML = "<font color='red'>"+gender+"</font>";
+    }
+  </script>
+</head>
+<body>
+  <h2>라디오 버튼값 체크하기</h2>
+  <form name="myform">
+    <div>
+      <input type="radio" name="gender" id="gender1" value="남" checked />남자
+      <input type="radio" name="gender" id="gender2" value="여" />여자
+      <input type="button" value="성별체크" onclick="fCheck()"/>
+    </div>
+  </form>
+  <hr/>
+  <div id="demo"></div>
+</body>
+</html>

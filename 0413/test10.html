@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <script>
+    'use strict'
+    let sw=0;
+    function fCheck(){
+      if(sw==0){
+        demo.innerHTML="안녕하세요"
+        sw=1;
+      }
+      else{
+        demo.innerHTML="반갑습니다"
+        sw=0;
+      }
+    }
+  </script>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test10.html</title>
+</head>
+<body>
+  <h2>토글버튼</h2>
+  <p>안녕/반갑</p>
+  <p><button type="button" onclick="fCheck()">토글버튼</button></p>
+  <hr/>
+  <div id="demo">메시지 띄우기</div>
+</body>
+</html>

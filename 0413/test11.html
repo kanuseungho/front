@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test11.html</title>
+  <script>
+    'use strict';
+
+    const strSu = '100';
+    const numberSu = 100;
+
+    function fCheck1() {
+      let str = 'strSu = ' + strSu + ', numberSu = ' + numberSu + "<br/>";
+      str += 'strSu = ' + typeof(strSu) + ', numberSu = ' + typeof(numberSu) + "<br/>";
+      
+      if(strSu == numberSu) {
+        str += "두 변수의 값은 같다.";
+      }
+      else {
+        str += "두 변수의 값은 다르다.";
+      }
+      
+      demo.innerHTML = str;
+    }
+
+    function fCheck2() {
+      let str = 'strSu = ' + strSu + ', numberSu = ' + numberSu + "<br/>";
+      str += 'strSu = ' + typeof(strSu) + ', numberSu = ' + typeof(numberSu) + "<br/>";
+      
+      if(strSu === numberSu) {
+        str += "두 변수의 타입은 같다.";
+      }
+      else {
+        str += "두 변수의 타입은 다르다.";
+      }
+      
+      demo.innerHTML = str;
+    }
+  </script>
+</head>
+<body>
+  <h2>==(산술연산자) / ===(동치연산자)</h2>
+  <p><button type="button" onclick="fCheck1()">==연산자</button></p>
+  <p><button type="button" onclick="fCheck2()">===연산자</button></p>
+  <hr/>
+  <div id="demo"></div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test12.html</title>
+  <script>
+    'use strict';
+
+    let cnt = 0;
+
+    function fCheck1() {
+      cnt++;
+      demo.innerHTML = "이곳은 일반함수 : cnt = <font color='red'>" + cnt + "</font>";
+    }
+
+    function fCheck3() {
+      fCheck1();
+      fCheck2();
+    }
+
+    let fCheck2 = function () {
+      cnt++;
+      demo.innerHTML = "이곳은 익명함수 : cnt = <font color='blue'>" + cnt + "</font>";
+    }
+  </script>
+</head>
+<body>
+  <h2>익명함수 연습</h2>
+  <p>
+    <input type="button" value="일반함수1" onclick="fCheck1()"/>
+    <input type="button" value="익명함수" onclick="fCheck2()"/>
+    <input type="button" value="일반함수2" onclick="fCheck3()"/>
+  </p>
+  <hr/>
+  <div id="demo"></div>
+</body>
+</html>

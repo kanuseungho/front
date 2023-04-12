@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test7.html</title>
+  <script>
+    // let su = myform.su.value;
+    //let su = document.getElementsByName("su")[0].value;
+    //alert("su의 길이 : " + document.getElementsByName("su").length);
+    function calc() {
+
+      let price =0;;
+      for(let i=0; i<document.getElementsByName("price").length; i++) {
+        price += parseInt( document.getElementsByName("price")[i].value);
+      }
+      
+      demo.innerHTML = price;
+    }
+  
+  </script>
+</head>
+<body>
+  <h2>멀티 텍스트 입력처리 연습</h2>
+  <form name="myform">
+    상품1 <input type="text" name="product" value="냉장고" />
+    가격1 <input type="number" name="price" value=1 /><br/>
+    상품2 <input type="text" name="product" value="오디오" />
+    가격2 <input type="number" name="price" value=2 /><br/>
+    상품3 <input type="text" name="product" value="티비" />
+    가격3 <input type="number" name="price" value=3 /><br/>
+    상품4 <input type="text" name="product" value="선풍기" />
+    가격4 <input type="number" name="price" value=4 /><br/>
+    상품5 <input type="text" name="product" value="세탁기" />
+    가격5 <input type="number" name="price" value=5 /><br/>
+    <!-- <input type="button" value="계산" onclick="clac()"/> -->
+    <button type="button" onclick="calc()">제품</button>
+  </form>
+  <hr/>
+  <div id="demo"></div>
+</body>
+</html>
