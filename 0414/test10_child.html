@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test10_child.html</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    'use strict';
+
+    function receiveMid() {
+      document.getElementById("mid").value = opener.document.getElementById("mid").value;
+    }
+    function sendMid() {
+      opener.document.getElementById("mid").value=document.getElementById("mid").value;
+    }
+    // 자식창 닫고 자식창의 아이디를 부모창으로 보내고 커서는 부모창의 비밀번호칸으로 이동시키기
+    function childClose(){
+      sendMid();
+      opener.document.getElementById("pwd").focus();
+      window.close();
+    }
+  </script>
+</head>
+<body>
+<p><br/></p>
+<div class="container">
+  <h2>아이디 중복체크 : 자식창</h2>
+  <p>
+    아이디 : <input type="text" name="mid" id="mid" autofocus />
+  </p>
+  <p>
+    <input type="button" value="아이디보내기" onclick="sendMid()" class="btn btn-success btn-sm"/>
+    <input type="button" value="아이디가져오기" onclick="receiveMid()" class="btn btn-success btn-sm"/>
+    <input type="button" value="창닫기" onclick="childClose()" class="btn btn-success btn-sm"/>
+  </p>
+</div>
+<p><br/></p>
+</body>
+</html>

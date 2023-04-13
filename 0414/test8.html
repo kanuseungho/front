@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test8.html</title>
+  <script>
+    'use strict';
+
+    function diviceCheck() {
+      let str = '';
+      str += '화면 해상도 가로크기 : ' + window.screen.width + "px<br/>";
+      str += '화면 해상도 세로크기 : ' + window.screen.height + "px<br/>";
+      str += '사용자 작업영역 가로크기 : ' + window.screen.availWidth + "px<br/>";
+      str += '사용자 작업영역 세로크기 : ' + window.screen.availHeight + "px<br/>";
+      str += '표현 가능 색상수 : ' + Math.pow(2, screen.colorDepth) + "<br/>";
+      str += '픽셀당 표현 가능 색상수 : ' + Math.pow(2, screen.pixelDepth) + "<br/>";
+
+      demo.innerHTML = str;
+    }
+  </script>
+</head>
+<body>
+  <h2>윈도우 정보보기(screen객체)</h2>
+  <input type="button" value="해당도확인" onclick="diviceCheck()"/>
+  <hr/>
+  <div id="demo"></div>
+</body>
+</html>

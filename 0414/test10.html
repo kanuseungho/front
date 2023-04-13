@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test10.html</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    'use strict';
+
+    let newWindow;
+
+    function idCheck() {
+      let url = "test10_child.html";
+      let wName = "test10";
+      let opt = "width=500px, height=400px, left=300px, top=250px";
+      let mid = document.getElementById("mid").value.trim();
+
+      if(mid == "") {
+        alert("아이디를 입력하세요!");
+        document.getElementById("mid").focus();
+        return false;
+      }
+
+      newWindow = window.open(url, wName, opt);
+    }
+
+    // 자식창 닫기
+    function childClose() {
+      newWindow.close();
+    }
+  </script>
+</head>
+<body>
+<p><br/></p>
+<div class="container">
+  <h2>새창에 아이디 값 넘기기 : 이곳은 부모창입니다.</h2>
+  <form name="myform">
+    <p>아이디 :
+      <input type="text" name="mid" id="mid" value="hkd1234" autofocus required />
+      <input type="button" value="아이디중복체크" onclick="idCheck()" class="btn btn-secondary btn-sm"/>
+    </p>
+    <p>비밀번호 :
+      <input type="password" name="pwd" id="pwd" required />
+    </p>
+    <p>
+      <input type="button" value="로그인" class="btn btn-success"/>
+      <input type="reset" value="다시입력" class="btn btn-warning"/>
+      <input type="button" value="회원가입" class="btn btn-primary"/>
+      <input type="button" value="자식창닫기" onclick="childClose()" class="btn btn-danger"/>
+    </p>
+  </form>
+</div>
+<p><br/></p>
+</body>
+</html>

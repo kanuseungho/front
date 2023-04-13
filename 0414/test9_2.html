@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test7.html</title>
+  <script>
+    'use strict';
+
+    // function newWindow() {
+    //   let url = "test9_child.html";
+    //   let winName = "winName";  // 생략가능
+    //   let winWidth = 600;
+    //   let winHeight = 400;
+    //   let x =(screen.width/2) - (winWidth/2);
+    //   let y =(screen.height/2) - (winHeight/2);
+    //   let opt ="width="+winWidth+",height="+winHeight+",left="+x+",top="+y;
+    //   window.open(url, winName, opt);
+    // }
+    function newWindow(){
+      
+      let rkfh =document.getElementById("rkfh").value;
+      let tpfh =document.getElementById("tpfh").value;
+      let x=document.getElementById("winWidth").value;
+      let y=document.getElementById("winHeight").value;
+      if(rkfh==""){
+        //가로크기는 윈도우의 3/2크기로 띄워
+        rkfh= window.screen.width*3/2;
+      }else if(tpfh==""){
+        tpfh=window.screen.width*2/3;
+      }else if(rkfh<300){
+        rkfh=300;
+      }else if(tpfh<200){
+        tpfh=200;
+      }
+      let url="http://www.naver.com"
+      let win="win";
+      let opt="width="+rkfh+",height="+tpfh+",left="+x+",top="+y;
+      window.open(url,win,opt);
+    }
+
+  </script>
+</head>
+<body>
+  <h2>새창 띄우기(window.open())</h2>
+  <input type="button" value="새창띄우기" onclick="newWindow()"/>
+  <input type="number" name="rkfh" id="rkfh" >
+  <input type="number" name="tpfh" id="tpfh" >
+  <input type="number" name="tpfh" id="winWidth" >
+  <input type="number" name="tpfh" id="winHeight" >
+  <hr/>
+  <pre>
+    텍스트박스에 새로 띄워줄 원도우의 가로크기와 새로크기를 입력받는다
+    새 윈도우는 화면 중앙에 띄울 수 있게 한다
+    만약 새 윈도의 폭이300px이내면 최소 300px로 
+                  높이가 200px 이내면 최소200xp로처리하고 
+    또한 윈도우의 가로크기만 입력하였을 경우는 세로크기는 윈도우의 2/3크기로,
+    윈도우의 세로크기만 입력하였을 경우 가로크기는 윈도우의 3/2크기로 띄워주시오
+  </pre>
+
+</body>
+</html>

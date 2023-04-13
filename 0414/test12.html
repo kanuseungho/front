@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test12.html</title>
+  <script>
+    'use strict';
+
+    let str;
+
+    function mClick(e) {
+      str = '';
+      // alert("클릭 이벤트 발생");
+      let x = e.screenX;
+      let y = e.screenY;
+
+      str += "발생된 이벤트 :" + e.type + "<br/>";
+      str += "X 좌표 : " + x + "<br/>";
+      str += "Y 좌표 : " + y + "<br/>";
+
+      demo.innerHTML = str;
+    }
+
+    function mDblClick() {
+      document.getElementById("demo").style.backgroundColor = "#f00";
+      document.getElementById("demo").style.color = "#fff";
+    }
+
+    document.onclick = mClick;
+    document.ondblclick = mDblClick;
+  </script>
+</head>
+<body>
+  <h2>마우스 위치잡기</h2>
+  <p>마우스를 클릭하시면 현재 좌표가 출력됩니다.</p>
+  <hr/>
+  <div id="demo"></div>
+</body>
+</html>
