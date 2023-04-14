@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test9.html</title>
+  <script>
+    'use strict';
+
+    function font32() {
+      // demo.innerHTML = '32px';
+      document.getElementById("demo").style.fontSize = "32px";
+      document.getElementById("demo").style.backgroundColor = "#00f";
+    }
+  </script>
+</head>
+<body>
+  <h2>글자 속성 변경하기</h2>
+  <p>
+    <button type="button" onclick="font32()" class="btn btn-success">글꼴2em(32px)</button>
+    <button type="button" onclick='document.getElementById("demo").style.fontSize = "16px";' class="btn btn-primary">글꼴1em(16px)</button>
+    <button type="button" onclick="location.reload();" class="btn btn-warning">초기화</button>
+  </p>
+  <hr/>
+  <div id="demo">자바스크립트명령으로 글자크기 변경하기</div>
+</body>
+</html>

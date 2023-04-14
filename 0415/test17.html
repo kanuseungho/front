@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    'use strict';
+
+    let arr1 = [10,8,20,15,11,17];
+    console.log("1.arr1 : " + arr1);
+    console.log();
+
+    // 정렬 : sort() - 문자형식의 오름차순 정렬
+    let arr2 = arr1.sort();
+    console.log("2.오름차순정렬 : " + arr2);
+    console.log();
+
+    // 역순 : reserve() - 문자형식의 내림차순 정렬
+    let arr3 = arr1.reverse();
+    console.log("2.내림차순정렬 : " + arr3);
+
+    // 최대/최소 : max, min
+    // let maxValue = Math.max(10,8,20,15,11,17);
+    let maxValue = Math.max(...arr1);
+    console.log("최대값 : " + maxValue);
+    let minValue = Math.min(...arr1);
+    console.log("최소값 : " +minValue);
+  </script>
+</head>
+<body>
+  <h2>배열연습</h2>
+</body>
+</html>

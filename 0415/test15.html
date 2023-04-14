@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test15.html</title>
+  <script>
+    'use strict';
+
+    // 배열선언 : new Array();
+    const arr1 = new Array();   // java : int[] arr1 = new int[5];
+    const fruits = ['사과','배','바나나','딸기','포도'];
+
+    document.write("1. " + fruits + "<br/>");
+    console.log("1." + fruits);
+    document.write("2. " + fruits.length + "<br/>");
+    document.write("3. " + fruits[0] + "<br/>");
+    document.write("4. " + fruits[fruits.length-1] + "<br/><br/>");
+
+    // 향상된 for문(of) - 값을 추출할때 사용
+    for(let fruit of fruits) {
+      document.write(fruit + " / ");
+    }
+    document.write("<br/>");
+    
+    // 향상된 for문(in) - 인덱스번호 추출
+    for(let fruit in fruits) {
+      document.write(fruit + " / ");
+    }
+    document.write("<br/>");
+    
+    // 향상된 for문(forEach)
+    fruits.forEach(function(){
+      document.write("값 : " + " / ");
+    });
+    document.write("<br/>");
+
+    // 향상된 for문(forEach)
+    fruits.forEach(function(fruit){
+      document.write(fruit + " / ");
+    });
+    document.write("<br/>");
+
+    // 향상된 for문(forEach)
+    fruits.forEach(function(fruit, index){
+      document.write(index + ". " + fruit + " / ");
+    });
+    document.write("======================<br/>");
+
+    // 향상된 for문(forEach)
+    fruits.forEach(function(fruit, index, array){
+      document.write(index + ". " + fruit + " /./ " + array + "<br/>");
+    });
+    document.write("<br/>");
+  </script>
+</head>
+<body>
+  <h2>배열 연습</h2>
+  <hr/>
+  <div id="demo"></div>
+</body>
+</html>

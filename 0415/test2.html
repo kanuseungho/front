@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test2.html</title>
+  <script>
+    'use strict';
+
+    let str;
+
+    function stringfyCheck() {
+      // 자바스크립트에서의 객체 생성
+      const Member = {
+        name : '홍길동',
+        age : 25,
+        color : 'white',
+        birthday : new Date(),
+        size : null,
+        gender : true,
+        atom : () => {
+          console.log("성명 : " , Member.name);
+        }
+      }
+      str = JSON.stringify(Member);
+      demo.innerHTML = str;
+    }
+
+    function parseCheck() {
+      stringfyCheck();
+      const obj = JSON.parse(str);
+      console.log(obj);
+
+      let birthDate = obj.birthday.substring(0,10);
+
+      let temp = '';
+      temp += 'name : ' + obj.name + "<br/>";
+      temp += 'age : ' + obj.age + "<br/>";
+      temp += 'color : ' + obj.color + "<br/>";
+      temp += 'gender : ' + obj.gender + "<br/>";
+      temp += 'birthday : ' + obj.birthday + "<br/>";
+      temp += '생일 : ' + birthDate + "<br/>";
+
+      demo.innerHTML = temp;
+    }
+  </script>
+</head>
+<body>
+  <h2>JSON.stringify() / JSON.parse()</h2>
+  <p>
+    JSON.stringify()<br/>
+    오브젝트객체를 JSON형식으로 변환<br/>
+    <input type="button" value="stringify연습" onclick="stringfyCheck()" class="btn btn-success"/>
+  </p>
+  <p>
+    JSON.parse()<br/>
+    JSON형식을 오브젝트객체로 변환<br/>
+    <input type="button" value="parse연습" onclick="parseCheck()" class="btn btn-primary"/>
+  </p>
+  <hr/>
+  <div id="demo"></div>
+</body>
+</html>

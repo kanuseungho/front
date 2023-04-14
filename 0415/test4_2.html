@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test4_2.html</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    'use strict';
+
+    let newText = '';
+    let idx = 0;
+
+    // 1. 1개 입력박스만 출력하기.
+    // function inputBox() {
+    //   let newText = '<input type="text" name="product" id="product" />';
+    //   demo.innerHTML = newText;
+    // }
+
+    // // 2. 클릭할때마다 입력박스 추가하기.
+    // function inputBox() {
+    //   newText += '<input type="text" name="product" id="product" /><br/>';
+    //   demo.innerHTML = newText;
+    // }
+
+    // 3. 클릭할때마다 입력박스 추가하기.(고유번호 지정하기...)
+    // function inputBox() {
+    //   idx++;
+    //   newText += idx + '. <input type="text" name="product" id="product'+idx+'" /><br/>';
+    //   demo.innerHTML = newText;
+    // }
+
+    // 4. 클릭할때마다 입력박스 추가하기.(삭제버튼 추가)
+    // function inputBox() {
+    //   idx++;
+    //   newText += idx + '. <input type="text" name="product" id="product'+idx+'" /> &nbsp;';
+    //   newText += '<input type="button" value="삭제('+idx+')" onclick="deleteBox('+idx+')" /><br/>';
+    //   demo.innerHTML = newText;
+    // }
+
+    // 5. 클릭할때마다 입력박스 추가하기.(삭제버튼 추가-입력박스와 삭제버튼을 그룹으로 지정해서 고유이름 부여하기)
+    // function inputBox() {
+    //   idx++;
+    //   newText += '<div id="proBox'+idx+'">';
+    //   newText += idx + '. <input type="text" name="product" id="product'+idx+'" /> &nbsp;';
+    //   newText += '<input type="button" value="삭제('+idx+')" onclick="deleteBox('+idx+')" /><br/>';
+    //   newText += '</div>';
+    //   demo.innerHTML = newText;
+    // }
+
+    // 6. 클릭할때마다 입력박스 추가하기.(삭제버튼 추가-입력박스와 삭제버튼을 그룹으로 지정해서 고유이름 부여하기)
+    // function inputBox() {
+    //   newText = ''
+
+    //   idx++;
+    //   newText += '<div id="proBox'+idx+'">';
+    //   newText += idx + '. <input type="text" name="product" id="product'+idx+'" /> &nbsp;';
+    //   newText += '<input type="button" value="삭제('+idx+')" onclick="deleteBox('+idx+')" /><br/>';
+    //   newText += '</div>';
+    //   demo.innerHTML += newText;
+    // }
+
+    // 7. 클릭할때마다 입력박스 추가하기.(부트스트랩 적용)
+    function inputBox() {
+      newText = ''
+
+      idx++;
+      newText += '<div id="proBox'+idx+'" class="m-1">';
+      newText += idx + '. <input type="text" name="product" id="product'+idx+'" /> &nbsp;';
+      // newText += '<input type="button" value="삭제('+idx+')" onclick="deleteBox('+idx+')" class="btn btn-outline-danger btn-sm" /><br/>';
+      newText += '<button type="button" onclick="deleteBox('+idx+')" class="badge badge-danger" />삭제('+idx+')</button><br/>';
+      newText += '</div>';
+      demo.innerHTML += newText;
+    }
+
+
+    // 입력상자 지우기
+    function deleteBox(idx) {
+      //alert(idx);       // console.log(idx);
+      let proBox = "proBox" + idx;
+      let item = document.getElementById(proBox);
+      item.parentNode.removeChild(item);
+    }
+  </script>
+</head>
+<body>
+<p><br/></p>
+<div class="container">
+  <h2>입력창 추가(동적폼)</h2>
+  <form name="myform">
+    <p>
+      <input type="button" value="입력창추가" onclick="inputBox()" />
+      <input type="button" value="입력창모두제거" onclick="location.reload();" />
+    </p>
+  </form>
+  <hr/>
+  <div id="demo"></div>
+</div>
+<p><br/></p>
+</body>
+</html>
