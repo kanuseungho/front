@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test3.html</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> -->
+  <script>
+    'use strict';
+
+    // jQuery => $
+    // 사용법:  $("셀렉터").이벤트(function() {});
+    // jQuery(document).ready(function() {
+    $(document).ready(function() {
+
+      // $("#demo").css("color","red");
+      // $("#demo").css("fontSize","25pt");
+      $("#demo").css({'color':'red','fontSize':'25pt'});
+
+      // $("#calcBtn").click(function() {
+      $("#calcBtn").click(() => {
+        // let product = document.getElementById("product").value;
+        let product = $("#product").val();
+        let price = $("#price").val();
+        let su = $("#su").val();
+
+        if(isNaN(price) || isNaN(su)) {
+          alert("숫자만 입력하세요");
+          $("#price").select();
+          $("#price").focus();
+          return;
+        }
+
+        let res = price * su;
+        // alert(product + "의 가격은? " + res);
+        demo.innerHTML = product + "의 가격은? " + res;
+      });
+
+    });
+  </script>
+</head>
+<body>
+<p><br/></p>
+<div class="container">
+  <h2 class="mb-3">상품가격 계산하기</h2>
+  <form name="myform">
+    <div>
+      상품명 :
+      <input type="text" name="product" id="product" value="냉장고" autofocus class="mb-3 form-control">
+    </div>
+    <div>
+      상품가격 :
+      <input type="text" name="price" id="price" value="0" class="mb-3 form-control">
+    </div>
+    <div>
+      수량 :
+      <input type="text" name="su" id="su" value="0" class="mb-3 form-control">
+    </div>
+    <div>
+      <input type="button" value="계산하기" id="calcBtn" class="btn btn-success mt-2 form-control">
+    </div>
+  </form>
+  <hr/>
+  <!-- <font size="5" color="red"><div id="demo"></div></font> -->
+  <div id="demo"></div>
+</div>
+</body>
+</html>

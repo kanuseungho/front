@@ -1,0 +1,230 @@
+/* PC화면을 주화면...(최소 1024px 기준) */
+
+/* 공통사항 */
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "맑은 고딕", "굴림", "돋움", "궁서";
+  font-size: 1em;
+  background: linear-gradient(to bottom, skyblue, white 50%);
+  background-attachment: fixed;
+}
+
+ul li {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+/* PC모두 설정하기 */
+#container {
+  width: 960px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+#mainHeader {
+  height: 280px;
+  margin-top: 0px;
+  background-image: url("images/12.jpg");
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+#mainHeader h1 {
+  position: absolute;
+  margin-top: 40px;
+  margin-left: 20px;
+}
+
+.header1 a {
+  color: #ff0;
+  font-size: 2em;
+  text-shadow: 1px 2px 1px #000;
+}
+
+#mainNav {
+  width: 960px;
+  height: 60px;
+  background-color: green;
+}
+
+#mainNav ul {
+  margin: 0px;
+  text-align: center;
+}
+
+#mainNav ul li {
+  float: left;
+  width: 100px;
+  height: 40px;
+  font-size: 1.1em;
+  padding: 20px 0px 0px 98px;
+}
+
+#mainNav a {
+  color: #fff;
+  font-weight: bolder;
+}
+
+#mainNav a:hover {
+  color: #00f;
+}
+
+#content {
+  width: 720px;
+  float: left;
+  padding-left: 10px;
+}
+
+#footer {
+  clear: both;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0px 25px;
+}
+
+#sidebar {
+  width: 200px;
+  float: right;
+  padding: 20px 15px;
+}
+
+#sidebar img {
+  border: 1px solid #aaa;
+  margin-bottom: 12px;
+}
+
+#sidebar img:hover {
+  border: 1px solid #000;
+  opacity: 0.8;
+}
+
+.notice li {
+  list-style: circle;
+}
+
+/* 태블릿 모드(600px ~ 1023px) */
+@media screen and (min-width:600px) and (max-width:1023px) {
+  #container {
+    width: 580px;
+  }
+  
+  #mainHeader {
+    height: 170px;
+    background-image: url("images/11.jpg");
+  }
+  
+  #mainHeader h1 {
+    margin-top: 20px;
+  }
+  
+  .header1 a {
+    font-size: 1.5em;
+  }
+  
+  #mainNav {
+    width: 580px;
+  }
+  
+  #mainNav ul li {
+    width: 90px;
+    height: 30px;
+    font-size: 1em;
+    padding: 20px 0px 0px 30px;
+  }
+  
+  #content {
+    width: 560px;
+  }
+  
+  #footer {
+    font-size: 0.8em;
+    padding: 5px 0px 20px;
+  }
+  
+  #sidebar {
+    width: 560px;
+    padding: 10px 8px;
+  }
+  
+  #sidebar img {
+    border: 1px solid #aaa;
+    margin-bottom: 12px;
+    width: 32%;
+  }
+
+}
+
+/* 모바일 모드(~ 599px) */
+@media screen and (max-width:599px) {
+  #container {
+    width: 320px;
+  }
+  
+  #mainHeader {
+    height: 90px;
+    background-image: url("images/13.jpg");
+  }
+  
+  #mainHeader h1 {
+    margin-top: 15px;
+    margin-left: 20px;
+  }
+  
+  .header1 a {
+    font-size: 0.8em;
+  }
+  
+  #mainNav {
+    width: 320px;
+    height: 0px;
+  }
+  
+  #mainNav ul li {
+    width: 280px;
+  }
+  
+  #mainNav a {
+    color: brown;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 0px 125px 0px -100px;
+    font-size: 0.85em;
+    padding: 10px 0px;
+  }
+  
+  #mainNav a:hover {
+    color: #fff;
+    background-color: green;
+  }
+  
+  #content {
+    width: 300px;
+    font-size: 0.8em;
+  }
+  
+  #footer {
+    font-size: 0.6em;
+  }
+  
+  #sidebar {
+    width: 320px;
+    padding: 0px;
+  }
+  
+  #sidebar img {
+    border: 1px solid #aaa;
+    margin: 0px 2px 0px;
+    width: 98%
+  }
+  
+}
