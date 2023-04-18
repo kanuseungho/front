@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test3.html</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> -->
+  <style>
+    #intro {
+      width: 300px;
+      height: 250px;
+      border: 1px solid gray;
+      background-color: antiquewhite;
+      overflow: auto;
+      padding: 5px;
+    }
+  </style>
+  <script>
+    'use strict';
+
+    let chai = 0;
+
+    $(function() {
+      let boxHeight = $('#intro').height();
+      let scrollHeight = $('#intro').prop('scrollHeight');
+      let scrollTop = $('#intro').scrollTop();
+
+      console.log("박스의 높이", boxHeight);
+      console.log("스크롤바의 높이", scrollHeight);
+      console.log("스크롤바의 시작위치", scrollTop);
+
+      chai = scrollHeight - boxHeight;
+      console.log("차이", chai);
+
+      /*
+      $('#btnEnd').click(function() {
+        $('#intro').scrollTop(chai);
+      });
+
+      $('#btnTop').click(function() {
+        $('#intro').scrollTop(0);
+      });
+      */
+    });
+
+    function scrollBottomCheck() {
+      $('#intro').scrollTop(chai);
+    }
+
+    function scrollTopCheck() {
+      $('#intro').scrollTop(0);
+    }
+  </script>
+</head>
+<body>
+<p><br/></p>
+<div class="container">
+  <div>
+    <input type="button" value="영역의 끝으로이동" id="btnEnd" onclick="scrollBottomCheck()" class="btn btn-success"/>
+    <input type="button" value="영역의 처음으로이동" id="btnTop" onclick="scrollTopCheck()" class="btn btn-primary"/>
+  </div>
+  <hr/>
+  <h2>자기소개서</h2>
+  <div id="intro">
+    <div>1.자기소개서를 작성하고 있습니다.</div>
+    <div>2.자기소개서를 작성하고 있습니다.</div>
+    <div>3.자기소개서를 작성하고 있습니다.</div>
+    <div>4.자기소개서를 작성하고 있습니다.</div>
+    <div>5.자기소개서를 작성하고 있습니다.</div>
+    <div>6.자기소개서를 작성하고 있습니다.</div>
+    <div>7.자기소개서를 작성하고 있습니다.</div>
+    <div>8.자기소개서를 작성하고 있습니다.</div>
+    <div>9.자기소개서를 작성하고 있습니다.</div>
+    <div>10.자기소개서를 작성하고 있습니다.</div>
+    <div>12.자기소개서를 작성하고 있습니다.</div>
+    <div>13.자기소개서를 작성하고 있습니다.</div>
+    <div>14.자기소개서를 작성하고 있습니다.</div>
+    <div>15.자기소개서를 작성하고 있습니다.</div>
+    <div>16.자기소개서를 작성하고 있습니다.</div>
+    <div>17.자기소개서를 작성하고 있습니다.</div>
+    <div>18.자기소개서를 작성하고 있습니다.</div>
+    <div>19.자기소개서를 작성하고 있습니다.</div>
+    <div>20.자기소개서를 작성하고 있습니다.</div>
+    <div>21.자기소개서를 작성하고 있습니다.</div>
+    <div>22.자기소개서를 작성하고 있습니다.</div>
+    <div>23.자기소개서를 작성하고 있습니다.</div>
+    <div>24.자기소개서를 작성하고 있습니다.</div>
+    <div>25.자기소개서를 작성하고 있습니다.</div>
+  </div>
+</div>
+<p><br/></p>
+</body>
+</html>

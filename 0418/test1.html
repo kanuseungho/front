@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test1.html</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> -->
+  <script>
+    'use strict';
+
+    // $(document).ready(function() {});
+    $(function() {
+      let fruitArray = [];
+
+      // each버튼 클릭시 수행
+      $('.container input[name="choiceBtn1"]').click(function() {
+        $('.container input[class="fruit"]').each((index, item) => {
+          if($(item).is(':checked')) fruitArray.push($(item).val());
+        });
+        console.log(fruitArray);
+        // $('#demo').html(fruitArray);
+        $('#demo').html(fruitArray.join('/'));
+      });
+
+      // map버튼 클릭시 수행
+      /*
+      $('.container input[name="choiceBtn2"]').click(function() {
+        $('.container input[class="fruit"]').map((index, item) => {
+          if($(item).is(':checked')) fruitArray.push($(item).val());
+        });
+        console.log(fruitArray);
+        $('#demo').html(fruitArray.join('/'));
+      });
+      */
+      // map을 통한 자료의 전달은 return값으로 받아서(배열) get()메소드로 읽어와야 한다.
+      $('.container input[name="choiceBtn2"]').click(function() {
+        let fruitArray2 = $('.container input[class="fruit"]').map((index, item) => {
+          if($(item).is(':checked')) return $(item).val();
+        }).get().join('/');
+        console.log(fruitArray2);
+        // $('#demo').html(fruitArray2.join('/'));
+        $('#demo').html(fruitArray2);
+      });
+    });
+
+  </script>
+</head>
+<body>
+<p><br/></p>
+<div class="container">
+  <h2>좋아하는 과일은?</h2>
+  <form name="myform">
+    <p>
+      <input type="checkbox" name="fruit" value="사과" class="fruit" />사과 &nbsp;
+      <input type="checkbox" name="fruit" value="배" class="fruit" />배 &nbsp;
+      <input type="checkbox" name="fruit" value="바나나" class="fruit" />바나나 &nbsp;
+      <input type="checkbox" name="fruit" value="키위" class="fruit" />키위 &nbsp;
+      <input type="checkbox" name="fruit" value="포도" class="fruit" />포도 &nbsp;
+      <input type="checkbox" name="fruit" value="수박" class="fruit" />수박 &nbsp;
+      <input type="checkbox" name="fruit" value="참외" class="fruit" />참외 &nbsp;
+      <input type="checkbox" name="fruit" value="딸기" class="fruit" />딸기
+    </p>
+    <p>
+      <input type="button" value="선택(each)" name="choiceBtn1" class="btn btn-success"/>
+      <input type="button" value="선택(map)" name="choiceBtn2" class="btn btn-primary"/>
+      <input type="button" value="취소" name="choiceBtn3" onclick="location.reload()" class="btn btn-warning"/>
+    </p>
+  </form>
+  <hr/>
+  <div id="demo"></div>
+</div>
+<p><br/></p>
+</body>
+</html>
